@@ -4,13 +4,6 @@ O **DevConnect** é uma aplicação web completa (Full Stack) desenvolvida para 
 
 ---
 
-## Links de Produção (Deploy)
-
-* **Frontend (Vercel):** [https://devconnect.vercel.app](https://devconnect.vercel.app) *(substitua pela sua URL real)*
-* **Backend (Render):** [https://devconnect-api.onrender.com](https://devconnect-api.onrender.com) *(substitua pela sua URL real)*
-
----
-
 ## Credenciais de Teste para Avaliação
 
 Para facilitar os testes da avaliação sem a necessidade de cadastrar uma nova conta, utilize o usuário pré-cadastrado abaixo:
