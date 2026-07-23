@@ -4,6 +4,10 @@ O **DevConnect** é uma aplicação web completa (Full Stack) desenvolvida para 
 
 ---
 
+## Links do Projeto
+- **Frontend (Vercel):** [Acesse a aplicação aqui](https://gerenciador-tarefas-fullstack-7ubc4wy9n-eduardo-paes1.vercel.app)
+- **Backend API (Render):** [Acesse a API aqui](https://gerenciador-tarefas-fullstack.onrender.com)
+
 ## Credenciais de Teste para Avaliação
 
 Para facilitar os testes da avaliação sem a necessidade de cadastrar uma nova conta, utilize o usuário pré-cadastrado abaixo:
