@@ -1,0 +1,64 @@
+.bg-auth-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background-color: #0f172a !important;
+}
+
+.sidebar .nav-link {
+  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  #app-screen {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.list-group-item {
+  border-radius: 12px !important;
+  margin-bottom: 10px;
+  border: 1px solid #f1f5f9 !important;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.list-group-item:hover {
+  border-color: #cbd5e1 !important;
+  transform: translateX(4px);
+}
+
+.task-done {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.task-done-bg {
+  background-color: #f8fafc !important;
+  opacity: 0.8;
+}
+
+.btn-action {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
