@@ -7,6 +7,10 @@ import taskRoutes from './routes/taskRoutes.js';
 
 dotenv.config();
 
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Rejeição não tratada em:', promise, 'motivo:', reason);
+});
+
 const app = express();
 app.use(cors());
 app.use(express.json());
