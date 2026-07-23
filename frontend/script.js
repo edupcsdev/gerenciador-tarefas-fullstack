@@ -78,7 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      const endpoint = isLoginMode ? '/auth/login' : '/auth/register';
+      // CORRIGIDO: Adicionado o prefixo /api
+      const endpoint = isLoginMode ? '/api/auth/login' : '/api/auth/register';
       const payload = isLoginMode ? { email, senha } : { nome, email, senha };
 
       try {
@@ -103,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
           toggleAuth.click();
         }
       } catch (error) {
-        alert('Não foi possível conectar ao backend! Verifique se ele está rodando com "npm run dev".');
+        alert('Não foi possível conectar ao backend! Verifique se ele está rodando.');
       }
     });
   }
@@ -119,7 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!titulo) return;
 
       try {
-        const res = await fetch(`${API_URL}/tasks`, {
+        // CORRIGIDO: Adicionado /api/tasks
+        const res = await fetch(`${API_URL}/api/tasks`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -179,7 +181,8 @@ function logout() {
 async function carregarTarefas() {
   const token = localStorage.getItem('token');
   try {
-    const res = await fetch(`${API_URL}/tasks`, {
+    // CORRIGIDO: Adicionado /api/tasks
+    const res = await fetch(`${API_URL}/api/tasks`, {
       headers: { 'Authorization': `Bearer ${token}` }
     });
 
@@ -280,7 +283,8 @@ function renderizarTarefas(tarefas) {
 async function toggleStatusTarefa(id, statusAtual) {
   const token = localStorage.getItem('token');
   try {
-    const res = await fetch(`${API_URL}/tasks/${id}`, {
+    // CORRIGIDO: Adicionado /api/tasks
+    const res = await fetch(`${API_URL}/api/tasks/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -290,7 +294,7 @@ async function toggleStatusTarefa(id, statusAtual) {
     });
 
     if (!res.ok) {
-      const resPatch = await fetch(`${API_URL}/tasks/${id}`, {
+      const resPatch = await fetch(`${API_URL}/api/tasks/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -316,7 +320,8 @@ async function deletarTarefa(id) {
 
   const token = localStorage.getItem('token');
   try {
-    await fetch(`${API_URL}/tasks/${id}`, {
+    // CORRIGIDO: Adicionado /api/tasks
+    await fetch(`${API_URL}/api/tasks/${id}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${token}` }
     });
