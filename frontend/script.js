@@ -77,8 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Por favor, preencha o e-mail e a senha.');
         return;
       }
-
-      // CORRIGIDO: Adicionado o prefixo /api
+      
       const endpoint = isLoginMode ? '/api/auth/login' : '/api/auth/register';
       const payload = isLoginMode ? { email, senha } : { nome, email, senha };
 
